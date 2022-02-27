@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root {
+    --cornering: 15px;
+    --cornering-x: 25px;
+    --cornering-XL: 35px;
+    --dark-color: #171717;
+    --undark-color: #1b1b1b;
+    --redx: #ff2626;
+    --greenx: #26ff38;
+    --Light-color: #fefefe;
+    --transitioning: 0.3s ease-in-out;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cursorPointer{ cursor:pointer}
+
+body {
+    display:flex;
+    justify-content: center;
+    height: auto;
+    margin: 20px;
+    background: var(--dark-color)
+}
+
+
+/* StatBlock Plate */
+.plate{
+    margin:1rem;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    border-radius: var(--cornering);
+    box-shadow: 10px 10px 10px #111111, -10px -10px 10px #1a1a1a;
+    
+}
+/* EndBlobk Plate */
+
+
+/* StartBlock Container */
+.container{
+    width: 128px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    border-radius: var(--cornering-XL);
+    box-shadow: 10px 10px 10px #111111, -10px -10px 10px #1a1a1a;
+    transition: var(--transitioning);
+}
+.container:hover{
+    border-radius: 50%;
+}
+/* EndBlock Container */
+
+.gradient-text{
+    background: linear-gradient(to left, #9e0022 0%, #30CFD0 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: var(--transitioning);
+
+
+}
+
+
+/* StartBlock Toggle */
+.toggle{
+    width:80px;
+    height: 40px;
+    position:relative;
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-width: 2px;
+    border-color: var(--dark-color);
+    box-shadow: 5px 5px 2px #111111, -5px -5px 2px #1a1a1a;
+    border-radius: 20px;
+}
+.slide{
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    position:absolute;
+    transform: translateX(-50%);
+    transition: var(--transitioning);
+    background: var(--dark-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+.slide i{
+    transition: var(--transitioning);
+    transform: rotateZ(90deg);
+}
+/* EndBlock Toggle */
